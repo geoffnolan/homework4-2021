@@ -23,9 +23,7 @@ tr{
 }
 
 /*END STARTER CODE*/
-html{
-  height: 100%;
-}
+
 body{
   height: 100%;
   color: #000000;
@@ -91,7 +89,6 @@ td, th{
 /*Req 6c*/
 .rowhead{
   border-right: 2px solid #000000;
-;
   
 }
 
@@ -113,24 +110,32 @@ tr:hover{
 
 /*Req 7*/
 table{
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-radius: 10px;
     border: 2px solid #000000;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
+    border-spacing: 0;
 }
 
+
+
 thead tr:first-child th:first-child{
-  border-left: none;
+  border-radius: 10px 0 0 0;
+}
+thead tr:first-child th:last-child{
+  border-radius: 0 10px 0 0;
+}
+thead tr:first-child td:first-child{
+  border-radius: 0 0 0 10px;
+}
+thead tr:first-child td:last-child{
+  border-radius: 10px 0 0 10px 0;
 }
 /*Add selectors and rules here*/
 
 /*Req 8*/
-.wrapper{
-  min-height: 100%;
-  margin-bottom: -50px;
-}
+
 
 footer{
   min-height: 75px;
@@ -142,7 +147,4 @@ footer{
 
 }
 
-.footer, .push{
-  margin-top: -50px;
-  height:50px;
 }
