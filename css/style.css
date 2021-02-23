@@ -23,8 +23,11 @@ tr{
 }
 
 /*END STARTER CODE*/
-
+html{
+  height: 100%;
+}
 body{
+  height: 100%;
   color: #000000;
   font-size: 16px;
   margin: 1.2em;
@@ -76,7 +79,7 @@ td, th{
 
 /*Req 6b*/
 .colhead{
-  width: 125px;
+  min-width: 125px;
   padding: 10px;
   color: #FFFFFF;
   text-align: center;
@@ -87,8 +90,8 @@ td, th{
 }
 /*Req 6c*/
 .rowhead{
-  border-left: 2px solid #000000;
   border-right: 2px solid #000000;
+;
   
 }
 
@@ -110,7 +113,7 @@ tr:hover{
 
 /*Req 7*/
 table{
-    border-collapse: separate;
+    border-collapse: collapse;
     border: 2px solid #000000;
     margin-left: auto;
     margin-right: auto;
@@ -121,24 +124,25 @@ table{
 thead tr:first-child th:first-child{
   border-left: none;
 }
-
-td, th{
-  border-left: solid black 2px;
-  border-top: solid black 2px;
-}
 /*Add selectors and rules here*/
 
-th{
-  border-top: none;
+/*Req 8*/
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -50px;
 }
 
-/*Req 8*/
 footer{
-  height: 75px;
+  min-height: 75px;
   width:100%;
   background:#000000;
   text-align:center;
   color: #FFFFFF;
-  position: absolute;
+  position: fixed;bottom:0;left:0;right:0;
+
 }
 
+.footer, .push{
+  margin-top: -50px;
+  height:50px;
+}
